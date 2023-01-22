@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Fizzbuzz</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Welcome to Fizzbuzz</h2>
+      <div class="res">
+        {% for i in range(1,101) %} {% if (i%3==0) and (i%5==0) %}
+        <p class="fizzbuzz">FizzBuzz,</p>
+        {% elif i%3==0 %}
+        <p class="fizz">Fizz,</p>
+        {% elif i%5==0 %}
+        <p class="buzz">Buzz,</p>
+        {% else %}
+        <p class="res">{{i}},</p>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
